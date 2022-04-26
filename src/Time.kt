@@ -1,35 +1,21 @@
-import java.text.DateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+fun formatDuration(duration: Int): String {
+    var result = ""
+    if (duration <= 359999) {
+        val hours = duration / 3600
+        val minutes = duration % 3600 / 60
+        val seconds = duration % 60
+        result = String.format("%02d:%02d:%02d", hours, minutes, seconds)
+    } else {
+        println("Max input 359999")
+    }
+    return result
+}
 
-//fun time(second: Int): Array<Int> {
-//    var ss = 0
-//    var mm = 0
-//    var hh = 0
-//
-//    var date = arrayOf(ss,mm,hh)
-//    for(i in date.indices){
-//        if ()
-//        if(second > 60){+
-//            ss++
-//        }else if (second > 60 ){
-//            mm++
-//        }else if (second > 60 ){
-//            hh++
-//        }
-//    }
-//    return date
-//
-//    fun formatDuration(seconds: Long): String = if (seconds < 60) {
-//        seconds.toString()
-//    } else {
-//        DateUtils.formatElapsedTime(seconds)
-//    }
-//
-//}
-//
-//
-//fun main() {
-//    val time = time(120)
-//    println(time.joinToString(" "))
-//}
+
+
+fun main() {
+    val time = formatDuration(3601)
+    println(time)
+    val a = 2 + 3 * 1
+  println(a)
+}

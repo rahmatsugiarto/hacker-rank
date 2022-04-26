@@ -5,12 +5,12 @@
  */
 
 fun staircase(n: Int): Unit {
-    for (x in 1..n){
-        for (y in 1..n){
-            if (y <= x){
-                print("#")
-            }else{
+    for (x in 1..n) {
+        for (y in 1..n) {
+            if (x < y){
                 print(" ")
+            }else{
+                print("*")
             }
         }
         println()
